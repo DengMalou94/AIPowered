@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Header from "@/components/Header";
+import Header from "src/components/Header";
 
 
 const Home = async () => {
@@ -20,8 +20,6 @@ const Home = async () => {
              width={500}
              height={500}
              alt="world"
-             
-            
            />
             <div className="my-6">
               <h3 className="text-xl font-semibold text-gray-800 ">
@@ -31,6 +29,7 @@ const Home = async () => {
           </Link>
         </div>
       </div>
+      
     </>
   );
 };

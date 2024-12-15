@@ -10,7 +10,7 @@
 //   };
 
 module.exports = {
-  images: {
-    loader: 'default',
-  },
+  experimental: {
+    appDir: true,
+  }
 };
