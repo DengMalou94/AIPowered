@@ -1,12 +1,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import Header from "src/components/Header";
+import { Article } from "../components/Article";
+import { CopilotKit } from "@copilotkit/react-core";
+import { CopilotSidebar } from "@copilotkit/react-ui";
+import "@copilotkit/react-ui/styles.css";
+import "@copilotkit/react-textarea/styles.css";
+
 
 
 const Home = async () => {
+ 
+  
   return (
     <>
-      <Header />
+        <Header />
+          <CopilotKit>
+         
+            <CopilotSidebar
+              instructions="Help the user research a blog article topic."
+              defaultOpen={true}
+              labels={{
+                title: "Blog Article Copilot",
+                initial:
+                  "Hi you! 👋 I can help you research any topic for a blog article.",
+              }}
+              clickOutsideToClose={false}>
+              <Article />
+            </CopilotSidebar>
+          </CopilotKit>
+      {/* <Header />
       <div className="max-w-[85rem] h-full px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <Link
@@ -29,7 +52,7 @@ const Home = async () => {
           </Link>
         </div>
       </div>
-      
+       */}
     </>
   );
 };
